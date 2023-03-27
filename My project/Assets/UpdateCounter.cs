@@ -11,12 +11,13 @@ public class UpdateCounter : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Debug.Log(scoreText);
         scoreText.text = score.ToString() + " Collisions";
     }
 
     public void AddPoint()
     {
-        score++;
+        score += 1;
         scoreText.text = score.ToString() + " Collisions";
     }
 }

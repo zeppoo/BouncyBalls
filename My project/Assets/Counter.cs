@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Counter : MonoBehaviour
 {
+    public UpdateCounter other;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,8 +17,9 @@ public class Counter : MonoBehaviour
         
     }
     
-    private void OnTriggerEnter(Collider other) 
+    private void OnCollisionEnter(Collision ball) 
     {
-        other.GetComponent<UpdateCounter>().AddPoint();
+        other.AddPoint();
     }
+    
 }
